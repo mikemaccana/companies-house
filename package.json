@@ -1,7 +1,7 @@
 {
   "name": "companies-house",
-  "version": "0.0.1",
-  "description": "Companies House API clieny",
+  "version": "0.0.2",
+  "description": "Companies House API client",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
