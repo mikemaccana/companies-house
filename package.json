@@ -1,0 +1,14 @@
+{
+  "name": "companies-house",
+  "version": "0.0.1",
+  "description": "Companies House API clieny",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Mike MacCana <mike.maccana@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "^1.1.0"
+  }
+}
