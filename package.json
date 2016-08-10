@@ -1,6 +1,6 @@
 {
 	"name": "companies-house",
-	"version": "0.0.3",
+	"version": "0.1.0",
 	"description": "Companies House API client",
 	"main": "index.js",
 	"scripts": {

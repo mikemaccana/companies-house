@@ -24,7 +24,12 @@ module.exports = function(apiKey){
 		}, cb)
 	}
 
+  var profile = function(number, cb) {
+    getHelper('company/' + number, {}, cb);
+  }
+
 	return {
-		search: search
+    search: search,
+    profile: profile
 	}
 }
