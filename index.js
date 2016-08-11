@@ -28,8 +28,18 @@ module.exports = function(apiKey){
     getHelper('company/' + number, {}, cb);
   }
 
+  var filingHistory = function(number, cb) {
+    getHelper('company/' + number + '/filing-history', {}, cb);
+  }
+
+  var officers = function(number, cb) {
+    getHelper('company/' + number + '/officers', {}, cb);
+  }
+
 	return {
     search: search,
-    profile: profile
+    profile: profile,
+    filingHistory: filingHistory,
+    officers: officers
 	}
 }
