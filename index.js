@@ -24,7 +24,22 @@ module.exports = function(apiKey){
 		}, cb)
 	}
 
+  var profile = function(number, cb) {
+    getHelper('company/' + number, {}, cb);
+  }
+
+  var filingHistory = function(number, cb) {
+    getHelper('company/' + number + '/filing-history', {}, cb);
+  }
+
+  var officers = function(number, cb) {
+    getHelper('company/' + number + '/officers', {}, cb);
+  }
+
 	return {
-		search: search
+    search: search,
+    profile: profile,
+    filingHistory: filingHistory,
+    officers: officers
 	}
 }
