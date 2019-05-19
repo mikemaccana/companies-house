@@ -6,13 +6,16 @@
 	"scripts": {
 		"test": "mocha"
 	},
-	"repository" :{
-		"type" : "git",
-		"url" : "https://github.com/mikemaccana/companies-house.git"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mikemaccana/companies-house.git"
 	},
 	"author": "Mike MacCana <mike.maccana@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
 		"superagent": "^5.0.5"
+	},
+	"devDependencies": {
+		"prettier": "^1.17.1"
 	}
 }
