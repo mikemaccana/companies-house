@@ -16,6 +16,9 @@
 		"url": "https://github.com/mikemaccana/companies-house.git"
 	},
 	"author": "Mike MacCana <mike.maccana@gmail.com>",
+	"contributors": [
+		"Ben Ezard <ezard.ben@gmail.com>"
+	],
 	"license": "MIT",
 	"dependencies": {
 		"superagent": "^5.0.5"
