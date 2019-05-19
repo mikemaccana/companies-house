@@ -1,9 +1,9 @@
 import { CompanyStatus, CompanyType, Country } from "../";
 
 export interface CompanyProfile {
-	accounts?: Accounts
-	annual_return?: AnnualReturn
-	branch_company_details?: BranchCompanyDetails
+	accounts?: Accounts;
+	annual_return?: AnnualReturn;
+	branch_company_details?: BranchCompanyDetails;
 	can_file: boolean;
 	company_name: string;
 	company_number: string;
@@ -14,28 +14,28 @@ export interface CompanyProfile {
 		| "petition-to-restore-dissolved"
 		| "transformed-to-se"
 		| "converted-to-plc";
-	confirmation_statement: ConfirmationStatement
-	date_of_cessation?: string
-	date_of_creation?: string
-	etag?: string
-	external_registration_number?: string
-	foreign_company_details?: ForeignCompanyDetails
-	has_been_liquidated?: boolean
+	confirmation_statement: ConfirmationStatement;
+	date_of_cessation?: string;
+	date_of_creation?: string;
+	etag?: string;
+	external_registration_number?: string;
+	foreign_company_details?: ForeignCompanyDetails;
+	has_been_liquidated?: boolean;
 	/**
 	 * @deprecated
 	 * @this {links.charges} should be used instead
 	 */
-	has_charges?: boolean
+	has_charges?: boolean;
 	/**
 	 * @deprecated
 	 * @this {links.insolvency} should be used instead
 	 */
-	has_insolvency_history?: boolean
+	has_insolvency_history?: boolean;
 	/**
 	 * @deprecated
 	 * @this {subtype} should be used instead
 	 */
-	is_community_interest_company?: boolean
+	is_community_interest_company?: boolean;
 	jurisdiction:
 		| "england-wales"
 		| "wales"
@@ -44,8 +44,8 @@ export interface CompanyProfile {
 		| "european-union"
 		| "united-kingdom"
 		| "england"
-		| "noneu"
-	last_full_members_list_date?: string
+		| "noneu";
+	last_full_members_list_date?: string;
 	links: Links;
 	partial_data_available?:
 		| "full-data-available-from-financial-conduct-authority"
@@ -54,22 +54,20 @@ export interface CompanyProfile {
 	previous_company_names?: PreviousCompanyName[];
 	registered_office_address?: RegisteredOfficeAddress;
 	sic_codes?: String[];
-	subtype?:
-		| "community-interest-company"
-		| "private-fund-limited-partnership"
+	subtype?: "community-interest-company" | "private-fund-limited-partnership";
 	type: CompanyType;
 	undeliverable_registered_office_address?: boolean;
 }
 
 export interface Accounts {
 	accounting_reference_date: AccountingReferenceDate;
-	last_accounts?: LastAccounts
-	next_accounts?: NextAccounts
+	last_accounts?: LastAccounts;
+	next_accounts?: NextAccounts;
 	/**
 	 * @deprecated
 	 * @this {next_accounts.due_on} should be used instead
 	 */
-	next_due?: string
+	next_due?: string;
 	/**
 	 * @deprecated
 	 * @this {next_accounts.period_end_on} should be used instead
@@ -93,8 +91,8 @@ export interface LastAccounts {
 	 * @this {period_end_on} should be used instead
 	 */
 	made_up_to: string;
-	period_end_on?: string
-	period_start_on?: string
+	period_end_on?: string;
+	period_start_on?: string;
 	type:
 		| "null"
 		| "full"
@@ -113,41 +111,41 @@ export interface LastAccounts {
 }
 
 export interface NextAccounts {
-	due_on?: string
-	overdue?: boolean
-	period_end_on?: string
-	period_start_on?: string
+	due_on?: string;
+	overdue?: boolean;
+	period_end_on?: string;
+	period_start_on?: string;
 }
 
 export interface AnnualReturn {
-	last_made_up_to?: string
-	next_due?: string
-	next_made_up_to?: string
-	overdue?: boolean
+	last_made_up_to?: string;
+	next_due?: string;
+	next_made_up_to?: string;
+	overdue?: boolean;
 }
 
 export interface BranchCompanyDetails {
-	business_activity?: string
+	business_activity?: string;
 	parent_company_name: string;
 	parent_company_number: string;
 }
 
 export interface ConfirmationStatement {
-	last_made_up_to?: string
+	last_made_up_to?: string;
 	next_due: string;
 	next_made_up_to: string;
-	overdue?: boolean
+	overdue?: boolean;
 }
 
 export interface ForeignCompanyDetails {
-	accounting_requirement?: AccountingRequirement
-	accounts?: ForeignCompanyDetailsAccounts
-	business_activity?: string
-	company_type?: string
-	governed_by?: string
-	is_a_credit_finance_institution?: boolean
-	originating_registry?: OriginatingRegistry
-	registration_number?: string
+	accounting_requirement?: AccountingRequirement;
+	accounts?: ForeignCompanyDetailsAccounts;
+	business_activity?: string;
+	company_type?: string;
+	governed_by?: string;
+	is_a_credit_finance_institution?: boolean;
+	originating_registry?: OriginatingRegistry;
+	registration_number?: string;
 }
 
 export interface AccountingRequirement {
@@ -161,38 +159,38 @@ export interface AccountingRequirement {
 }
 
 export interface ForeignCompanyDetailsAccounts {
-	account_period_from?: AccountPeriodFrom
-	account_period_to?: AccountPeriodTo
-	must_file_within?: MustFileWithin
+	account_period_from?: AccountPeriodFrom;
+	account_period_to?: AccountPeriodTo;
+	must_file_within?: MustFileWithin;
 }
 
 export interface AccountPeriodFrom {
-	day: number
-	month: number
+	day: number;
+	month: number;
 }
 
 export interface AccountPeriodTo {
-	day?: number
-	month?: number
+	day?: number;
+	month?: number;
 }
 
 export interface MustFileWithin {
-	months?: number
+	months?: number;
 }
 
 export interface OriginatingRegistry {
-	country?: string
-	name?: string
+	country?: string;
+	name?: string;
 }
 
 export interface Links {
-	charges: string
-	filing_history: string
-	insolvency: string
-	officers: string
-	persons_with_significant_control: string
-	persons_with_significant_control_statements: string
-	registers: string
+	charges: string;
+	filing_history: string;
+	insolvency: string;
+	officers: string;
+	persons_with_significant_control: string;
+	persons_with_significant_control_statements: string;
+	registers: string;
 	self: string;
 }
 
