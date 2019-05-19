@@ -4,6 +4,7 @@
 	"description": "Companies House API client",
 	"main": "index.js",
 	"scripts": {
+		"build": "tsc",
 		"test": "mocha"
 	},
 	"repository": {
