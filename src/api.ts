@@ -1,8 +1,10 @@
 import * as request from "superagent";
 import { Profile } from "./profile";
+import { Search } from "./search";
 
 export class CompaniesHouseApi {
 	readonly profile = new Profile(this);
+	readonly search = new Search(this);
 
 	constructor(private readonly apiKey: string) {}
 
