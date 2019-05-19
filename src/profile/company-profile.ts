@@ -1,3 +1,5 @@
+import { CompanyStatus, CompanyType, Country } from "../";
+
 export interface CompanyProfile {
 	accounts?: Accounts
 	annual_return?: AnnualReturn
@@ -5,15 +7,7 @@ export interface CompanyProfile {
 	can_file: boolean;
 	company_name: string;
 	company_number: string;
-	company_status?:
-		| "active"
-		| "dissolved"
-		| "liquidation"
-		| "receivership"
-		| "administration"
-		| "voluntary-arrangement"
-		| "converted-closed"
-		| "insolvency-proceedings";
+	company_status?: CompanyStatus;
 	company_status_detail?:
 		| "transferred-from-uk"
 		| "active-proposal-to-strike-off"
@@ -63,38 +57,7 @@ export interface CompanyProfile {
 	subtype?:
 		| "community-interest-company"
 		| "private-fund-limited-partnership"
-	type:
-		| "private-unlimited"
-		| "ltd"
-		| "protected-cell-company"
-		| "plc"
-		| "old-public-company"
-		| "private-limited-guarant-nsc-limited-exemption"
-		| "limited-partnership"
-		| "private-limited-guarant-nsc"
-		| "converted-or-closed"
-		| "private-unlimited-nsc"
-		| "private-limited-shares-section-30-exemption"
-		| "assurance-company"
-		| "oversea-company"
-		| "eeig"
-		| "icvc-securities"
-		| "icvc-warrant"
-		| "icvc-umbrella"
-		| "industrial-and-provident-society"
-		| "northern-ireland"
-		| "northern-ireland-other"
-		| "llp"
-		| "royal-charter"
-		| "investment-company-with-variable-capital"
-		| "unregistered-company"
-		| "llp"
-		| "other"
-		| "european-public-limited-liability-company-se"
-		| "scottish-partnership"
-		| "charitable-incorporated-organisation"
-		| "scottish-charitable-incorporated-organisation"
-		| "further-education-or-sixth-form-college-corporation"
+	type: CompanyType;
 	undeliverable_registered_office_address?: boolean;
 }
 
@@ -243,14 +206,7 @@ export interface RegisteredOfficeAddress {
 	address_line_1?: string;
 	address_line_2?: string;
 	care_of?: string;
-	country?:
-		| "Wales"
-		| "England"
-		| "Scotland"
-		| "Great Britain"
-		| "Not specified"
-		| "United Kingdom"
-		| "Northern Ireland"
+	country?: Country;
 	locality?: string;
 	po_box?: string;
 	postal_code?: string;
