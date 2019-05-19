@@ -10,7 +10,8 @@
 		"outDir": "./dist",
 		"baseUrl": "./",
 		"incremental": true,
-		"typeRoots": ["./node_modules/@types"]
+		"typeRoots": ["./node_modules/@types"],
+		"strictNullChecks": true
 	},
 	"exclude": [
 		"node_modules",
