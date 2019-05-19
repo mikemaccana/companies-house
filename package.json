@@ -16,6 +16,7 @@
 		"superagent": "^5.0.5"
 	},
 	"devDependencies": {
-		"prettier": "^1.17.1"
+		"prettier": "^1.17.1",
+		"typescript": "^3.4.5"
 	}
 }
