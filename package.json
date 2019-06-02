@@ -1,18 +1,37 @@
 {
 	"name": "companies-house",
-	"version": "0.1.0",
+	"version": "2.0.0",
 	"description": "Companies House API client",
-	"main": "index.js",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"module": "dist/index.js",
+	"files": [
+		"dist/**/*"
+	],
 	"scripts": {
-		"test": "mocha"
+		"build": "tsc",
+		"test": "mocha -r ts-node/register -u tdd test/**/*.spec.ts"
 	},
-	"repository" :{
-		"type" : "git",
-		"url" : "https://github.com/mikemaccana/companies-house.git"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mikemaccana/companies-house.git"
 	},
 	"author": "Mike MacCana <mike.maccana@gmail.com>",
+	"contributors": [
+		"Ben Ezard <ezard.ben@gmail.com>"
+	],
 	"license": "MIT",
 	"dependencies": {
-		"superagent": "^1.1.0"
+		"superagent": "^5.0.5"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.1.7",
+		"@types/mocha": "^5.2.7",
+		"@types/superagent": "^4.1.1",
+		"chai": "^4.2.0",
+		"mocha": "^6.1.4",
+		"prettier": "^1.17.1",
+		"ts-node": "^8.2.0",
+		"typescript": "^3.4.5"
 	}
 }
