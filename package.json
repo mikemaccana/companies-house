@@ -10,7 +10,7 @@
 	],
 	"scripts": {
 		"build": "tsc",
-		"test": "mocha -r ts-node/register test/**/*.spec.ts"
+		"test": "mocha -r ts-node/register -u tdd test/**/*.spec.ts"
 	},
 	"repository": {
 		"type": "git",
