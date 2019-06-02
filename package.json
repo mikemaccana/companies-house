@@ -9,7 +9,7 @@
 	],
 	"scripts": {
 		"build": "tsc",
-		"test": "mocha"
+		"test": "mocha -r ts-node/register test/**/*.spec.ts"
 	},
 	"repository": {
 		"type": "git",
@@ -30,6 +30,7 @@
 		"chai": "^4.2.0",
 		"mocha": "^6.1.4",
 		"prettier": "^1.17.1",
+		"ts-node": "^8.2.0",
 		"typescript": "^3.4.5"
 	}
 }
