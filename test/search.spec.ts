@@ -8,7 +8,7 @@ suite("Search", () => {
 		api = new CompaniesHouseApi(process.env.COMPANIES_HOUSE_API_KEY as string);
 	});
 
-	suite("Options", async () => {
+	suite("options", async () => {
 		test("should affect number of returned items", async () => {
 			const numItems = 5;
 			const results = await api.search.searchAll("test", {
@@ -18,28 +18,28 @@ suite("Search", () => {
 		});
 	});
 
-	suite("Search all", () => {
+	suite("searchAll", () => {
 		test("should return results", async () => {
 			const results = await api.search.searchAll("test");
 			expect(results.items!.length).greaterThan(0);
 		});
 	});
 
-	suite("Search companies", () => {
+	suite("searchCompanies", () => {
 		test("should return results", async () => {
 			const results = await api.search.searchCompanies("test");
 			expect(results.items!.length).greaterThan(0);
 		});
 	});
 
-	suite("Search officers", () => {
+	suite("searchOfficers", () => {
 		test("should return results", async () => {
 			const results = await api.search.searchOfficers("test");
 			expect(results.items!.length).greaterThan(0);
 		});
 	});
 
-	suite("Search disqualified officers", () => {
+	suite("searchDisqualifiedOfficers", () => {
 		test("should return results", async () => {
 			const results = await api.search.searchDisqualifiedOfficers("test");
 			expect(results.items!.length).greaterThan(0);
