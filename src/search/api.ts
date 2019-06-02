@@ -2,8 +2,8 @@ import { CompaniesHouseApi } from "../api";
 import { AllSearchResult } from "./all-search";
 
 export interface SearchOptions {
-	itemsPerPage?: number;
-	startIndex?: number;
+	items_per_page?: number;
+	start_index?: number;
 }
 
 export class Search {
