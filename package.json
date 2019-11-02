@@ -13,6 +13,6 @@
 	"author": "Mike MacCana <mike.maccana@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"superagent": "^1.1.0"
+		"superagent": "^5.1.0"
 	}
 }
